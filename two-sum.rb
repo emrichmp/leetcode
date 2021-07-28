@@ -31,7 +31,7 @@
 
 # Follow-up: Can you come up with an algorithm that is less than O(n2) time complexity?
 
-#my solution:
+#my solution - nvm it was wrong lmao
 def two_sum(nums, target)
     nums.map do | i |
         x = nums.index(i)+1
