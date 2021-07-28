@@ -31,3 +31,12 @@
 
 # Follow-up: Can you come up with an algorithm that is less than O(n2) time complexity?
 
+#my solution:
+def two_sum(nums, target)
+    nums.map do | i |
+        x = nums.index(i)+1
+        if nums[x] + i == target
+            return [nums.index(i),x]
+        end
+    end
+end
