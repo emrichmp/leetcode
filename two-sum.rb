@@ -40,3 +40,16 @@ def two_sum(nums, target)
         end
     end
 end
+
+#correct solution:
+def two_sum(nums, target)
+    solution = {}
+    nums.each_with_index do |num, index|
+        n = target - num
+        if solution.include?(n)
+          return [solution[n], index]
+        else
+            solution[num] = index
+        end
+    end
+  end
