@@ -25,3 +25,33 @@
 # Constraints:
 
 # -231 <= x <= 231 - 1
+
+#First answer - doesn't handle negative input
+# def reverse(x)
+#     return arr = x.to_s.chars.map(&:to_i).reverse.join.to_i
+# end
+
+#Second answer - handles negative output but adds a 0
+# def reverse(x)
+#     if x >= 0
+#         arr = x.to_s.chars.map(&:to_i).reverse.join.to_i
+#         puts(arr)
+#     else
+#         arr = x.to_s.chars.map(&:to_i)
+#         arr.shift
+#         arr = -(arr.reverse.join.to_i)
+#         puts(arr)
+#     end
+# end
+
+# call = reverse(-321)
+
+#Final Answer - works, doesn't handle the bit thing, got too stuck and frustrated with it
+def reverse(x)
+    if x >= 0
+        return arr = x.to_s.chars.map(&:to_i).reverse.join.to_i
+    else
+        arr = x.to_s.chars.map(&:to_i)
+        return arr.shift
+    end
+end
